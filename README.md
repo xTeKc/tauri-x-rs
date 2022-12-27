@@ -3,6 +3,56 @@ Configure Tauri to use Rust exclusively for building applications on all platfor
 
 <br>
 
+# Quickstart
+If your system is setup, proceed:
+
+<br>
+
+## Clone this repo
+```
+git clone https://github.com/xTeKc/tauri-x-rs.git
+```
+<br>
+
+## **Run all make commands from the root of this repo**
+
+<br>
+
+## Run the demo for Desktop and Web
+```
+make dw
+```
+This will open the desktop app and host it for the web.
+
+<br>
+
+## Localhost for Web
+Go to this url in the browser for the web app.
+```
+http://127.0.0.1:1420/
+```
+
+<br>
+
+## Run the demo for Android
+In a new terminal tab, (ctrl + shift + t) run:
+```
+make a
+```
+
+<br>
+
+## ~~Run the demo for IOS~~
+~~In a new terminal tab, (ctrl + shift + t) run:~~
+<!-- ```
+make i
+``` -->
+``` 
+
+```
+
+<br>
+
 # Setup for Linux
 
 ## **Arch** setup
