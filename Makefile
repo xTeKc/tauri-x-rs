@@ -10,6 +10,6 @@ a:
 i:
 	clear && cargo tauri ios init
 
-# removes target/ dir, Cargo.lock file and dist/ dir, for a clean start
+# removes: dist/ - target/ - Cargo.lock, for a clean start
 c:
-	clear && rm -rf target/ && rm Cargo.lock && rm -rf dist/
+	clear && rm -rf dist/ && rm -rf target/ && rm Cargo.lock

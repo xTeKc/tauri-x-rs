@@ -4,22 +4,20 @@ Configure Tauri to use Rust exclusively for building applications on all platfor
 <br>
 
 # Quickstart
-If your system is setup, proceed:
+If your system is setup, proceed to...
 
 <br>
 
-## Clone this repo
-```
-git clone https://github.com/xTeKc/tauri-x-rs.git
-```
+## Use this template
+Create a new repo using this template.
 
 <br>
 
 ## Run the demo for Desktop and Web
+This will open the desktop app and host it for the web.
 ```
 make dw
 ```
-This will open the desktop app and host it for the web.
 
 <br>
 
@@ -46,6 +44,14 @@ make i
 ``` -->
 ``` 
 
+```
+
+<br>
+
+## Run to clean
+Removes: dist/ - target/ - Cargo.lock, for a clean start.
+```
+make c
 ```
 
 <br>
