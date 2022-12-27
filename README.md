@@ -3,6 +3,9 @@ Configure Tauri to use Rust exclusively for building applications on all platfor
 
 <br>
 
+Generate
+- [New repo from this Template](https://github.com/xTeKc/tauri-x-rs/generate) <br>
+
 Run
 - [Desktop and Web](https://github.com/xTeKc/tauri-x-rs#run-the-demo-for-desktop-and-web) <br>
 - [Web LocalHost](https://github.com/xTeKc/tauri-x-rs#localhost-for-web) <br>
@@ -24,6 +27,9 @@ If your system is setup, proceed to...
 
 ## Use this template
 Create a new repo using this template.
+```
+https://github.com/xTeKc/tauri-x-rs/generate
+```
 
 <br>
 
