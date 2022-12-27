@@ -3,6 +3,20 @@ Configure Tauri to use Rust exclusively for building applications on all platfor
 
 <br>
 
+Run
+- [Desktop and Web](https://github.com/xTeKc/tauri-x-rs#run-the-demo-for-desktop-and-web) <br>
+- [Web LocalHost](https://github.com/xTeKc/tauri-x-rs#localhost-for-web) <br>
+- [Android](https://github.com/xTeKc/tauri-x-rs#run-the-demo-for-android) <br>
+- [Clean](https://github.com/xTeKc/tauri-x-rs#run-to-clean) <br>
+
+Setup
+- [Linux](https://github.com/xTeKc/tauri-x-rs#setup-for-linux) <br>
+- [Android](https://github.com/xTeKc/tauri-x-rs#setup-for-android) <br>
+- [Rust](https://github.com/xTeKc/tauri-x-rs#install-rust) <br>
+- [Tauri](https://github.com/xTeKc/tauri-x-rs#setup-for-tauri) <br>
+
+<br>
+
 # Quickstart
 If your system is setup, proceed to...
 
@@ -21,7 +35,7 @@ make dw
 
 <br>
 
-## Localhost for Web
+## LocalHost for Web
 Go to this url in the browser for the web app.
 ```
 http://127.0.0.1:1420/
@@ -66,6 +80,7 @@ sudo pacman -S --needed \
     base-devel \
     curl \
     wget \
+    make \
     openssl \
     appmenu-gtk-module \
     gtk3 \
@@ -81,6 +96,7 @@ sudo apt install libwebkit2gtk-4.0-dev \
     build-essential \
     curl \
     wget \
+    make \
     libssl-dev \
     libgtk-3-dev \
     libayatana-appindicator3-dev \
@@ -94,41 +110,11 @@ sudo dnf install webkit2gtk3-devel.x86_64 \
     openssl-devel \
     curl \
     wget \
+    make \
     libappindicator-gtk3 \
     librsvg2-devel
 sudo dnf group install "C Development Tools and Libraries"
 ```
-
-<br>
-
-## Install **Rust**
-```
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
-```
-
-_or_
-
-## Update **Rust**
-```
-rustup update
-```
-
-<br>
-
-
-# Setup for Tauri
-
-## Install Tauri-Cli version **2.0.0-alpha**
-```
-cargo install tauri-cli --version "^2.0.0-alpha"
-```
-
-<br>
-
-<!-- ## Update deps in **src-tauri** dir to **2.0.0-alpha.0**
-```
-cargo add tauri@2.0.0-alpha.0 -F config-toml && cargo add tauri-build@2.0.0-alpha.0 --build
-``` -->
 
 <br>
 
@@ -198,3 +184,38 @@ export NDK_HOME="$ANDROID_HOME/ndk/25.0.8775105"
 ```
 ~/.android/cmdline-tools/bin/sdkmanager "platforms;android-33" "platform-tools" "ndk;25.0.8775105" "build-tools;33.0.0"
 ```
+
+<br>
+
+## Install **Rust**
+```
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
+_or_
+
+## Update **Rust**
+```
+rustup update
+```
+
+<br>
+
+
+# Setup for Tauri
+
+## Install Tauri-Cli version **2.0.0-alpha**
+```
+cargo install tauri-cli --version "^2.0.0-alpha"
+```
+
+<br>
+
+<!-- ## Update deps in **src-tauri** dir to **2.0.0-alpha.0**
+```
+cargo add tauri@2.0.0-alpha.0 -F config-toml && cargo add tauri-build@2.0.0-alpha.0 --build
+``` -->
+
+<br>
+
+
