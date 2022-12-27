@@ -12,9 +12,6 @@ If your system is setup, proceed:
 ```
 git clone https://github.com/xTeKc/tauri-x-rs.git
 ```
-<br>
-
-## **Run all make commands from the root of this repo**
 
 <br>
 
