@@ -1,12 +1,12 @@
 # tauri-x-rs
 Configure Tauri to use Rust exclusively for building applications on all platforms.
 
-<br>
+<!-- <br>
 
 Generate
-- [New repo from this Template](https://github.com/xTeKc/tauri-x-rs/generate) <br>
+- [New repo from this Template](https://github.com/xTeKc/tauri-x-rs/generate) <br> -->
 
-Run
+<!-- Run
 - [Desktop and Web](https://github.com/xTeKc/tauri-x-rs#run-the-demo-for-desktop-and-web) <br>
 - [Web LocalHost](https://github.com/xTeKc/tauri-x-rs#localhost-for-web) <br>
 - [Android](https://github.com/xTeKc/tauri-x-rs#run-the-demo-for-android) <br>
@@ -23,15 +23,15 @@ Setup
 # Quickstart
 If your system is setup, proceed to...
 
-<br>
+<br> -->
 
-## Use this template
+<!-- ## Use this template
 Create a new repo using this template.
 ```
 https://github.com/xTeKc/tauri-x-rs/generate
-```
+``` -->
 
-<br>
+<!-- <br>
 
 ## Run the demo for Desktop and Web
 This will open the desktop app and host it for the web.
@@ -61,7 +61,7 @@ make a
 ~~In a new terminal tab, (ctrl + shift + t) run:~~
 <!-- ```
 make i
-``` -->
+``` 
 ``` 
 
 ```
@@ -150,78 +150,41 @@ _click **show package details** to view all components_
 - NDK (side by side) 25.0.8775105
 
 
-<br>
+<br> -->
 
-# Standalone Setup for Android
+# Standalone Setup for Android (Arch)
 
-## Install **JDK**
-installs **JDK** and sets **JAVA_HOME** env var to path
-
-**Arch**
+**Run setup script (pwd)**
 ```
-sudo pacman -S jdk-openjdk
-export JAVA_HOME=/usr/lib/jvm/java-19-openjdk/
-
-```
-**Debian**
-```
-sudo apt update
-sudo apt install default-jdk
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+chmod +x arch_setup.sh && ./arch_setup.sh
 ```
 
-<br>
-
-## Install **Android SDK and NDK**
+**Run post script (pwd)**
 ```
-wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O cmdline-tools.zip
-unzip cmdline-tools.zip
-mkdir ~/.android
-mv cmdline-tools ~/.android
+chmod +x arch_post.sh && ./arch_post.sh
 ```
 
-## Set **ANDROID_HOME** and **NDK_HOME** env vars to path
+**Install system-images (~/.android)**
 ```
-export ANDROID_HOME="$HOME/.android"
-export NDK_HOME="$ANDROID_HOME/ndk/25.0.8775105"
-```
-
-## Install **Android SDK and NDK** components
-```
-~/.android/cmdline-tools/bin/sdkmanager "platforms;android-33" "platform-tools" "ndk;25.0.8775105" "build-tools;33.0.0"
+./cmdline-tools/latest/bin/sdkmanager "system-images;android-30;google_apis;x86_64"
 ```
 
-<br>
-
-## Install **Rust**
+**Create avd (~/.android)**
 ```
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+./cmdline-tools/latest/bin/avdmanager create avd --name andro2023 --device "pixel_5" --package "system-images;android-30;google_apis;x86_64"
 ```
 
-_or_
-
-## Update **Rust**
+**View avd (~/.android)**
 ```
-rustup update
+./cmdline-tools/latest/bin/avdmanager list avd
 ```
 
-<br>
-
-
-# Setup for Tauri
-
-## Install Tauri-Cli version **2.0.0-alpha**
+**Init Android (pwd)**
 ```
-cargo install tauri-cli --version "^2.0.0-alpha"
+cargo tauri android init
 ```
 
-<br>
-
-<!-- ## Update deps in **src-tauri** dir to **2.0.0-alpha.0**
+**Start avd (pwd)**
 ```
-cargo add tauri@2.0.0-alpha.0 -F config-toml && cargo add tauri-build@2.0.0-alpha.0 --build
-``` -->
-
-<br>
-
-
+cargo tauri android dev
+```
